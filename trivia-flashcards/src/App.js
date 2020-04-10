@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Card from './Card/Card';
-import DrawButton from './DrawButton/DrawButton'
+import DrawButton from './DrawButton/DrawButton';
+import { DB_CONFIG } from './Config/Firbase/dbConfig';
 
 class App extends Component {
   constructor(props){
