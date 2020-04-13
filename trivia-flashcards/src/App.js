@@ -3,10 +3,16 @@ import './App.css';
 import Card from './Card/Card';
 import DrawButton from './DrawButton/DrawButton';
 import { DB_CONFIG } from './Config/Firbase/dbConfig';
+import firebase from 'firebase/app';
+import 'firebase/database'
 
 class App extends Component {
   constructor(props){
     super(props);
+
+    this.app = initializeApp(DB_CONFIG);
+    this.database = this.app.database().ref().child('cards');
+    
 
     this.updateCard = this.updateCard.bind(this)
 
@@ -15,9 +21,9 @@ class App extends Component {
         {id: 1, question: "Question", answer: "Answer"},
         {id: 2, question: "Question2", answer: "Answer2"},
         {id: 3, question: "Question3", answer: "Answer3"},
-        {id: 1, question: "Question4", answer: "Answer4"},
-        {id: 2, question: "Question5", answer: "Answer5"},
-        {id: 3, question: "Question6", answer: "Answer6"}
+        {id: 4, question: "Question4", answer: "Answer4"},
+        {id: 5, question: "Question5", answer: "Answer5"},
+        {id: 6, question: "Question6", answer: "Answer6"}
       ],
       currentCard: {}
 
