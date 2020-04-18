@@ -2,28 +2,25 @@ import React, { Component } from 'react';
 import './App.css';
 import Card from './Card/Card';
 import DrawButton from './DrawButton/DrawButton';
-import { DB_CONFIG } from './Config/Firbase/dbConfig';
-import firebase from 'firebase/app';
-import 'firebase/database'
+
 
 class App extends Component {
   constructor(props){
-    super(props);
-
-    this.app = initializeApp(DB_CONFIG);
-    this.database = this.app.database().ref().child('cards');
-    
-
-    this.updateCard = this.updateCard.bind(this)
+    super(props);   
+       
+   
+    this.updateCard = this.updateCard.bind(this);
 
     this.state = {
       cards: [
-        {id: 1, question: "Question", answer: "Answer"},
-        {id: 2, question: "Question2", answer: "Answer2"},
-        {id: 3, question: "Question3", answer: "Answer3"},
-        {id: 4, question: "Question4", answer: "Answer4"},
-        {id: 5, question: "Question5", answer: "Answer5"},
-        {id: 6, question: "Question6", answer: "Answer6"}
+        {id: 1, question: '4 - "2" ', answer: "2"},
+        {id: 2, question: '4 + "2" ', answer: "42"},
+        {id: 3, question: '1 == "1" ', answer: "True"},
+        {id: 4, question: '1 === "1" ', answer: "False"},
+        {id: 5, question: "[] + [] ", answer: ' "" '},
+        {id: 6, question: "[] + {}", answer: ' "[object Object]" '},
+        {id: 7, question: ' {} + [] ', answer: "0"},
+        {id: 8, question: ' {} + {} ', answer: "NaN"},
       ],
       currentCard: {}
 
@@ -60,6 +57,7 @@ class App extends Component {
 
     return (
       <div className="App">
+        <h1>JavaScript Triva Flashcards</h1>
 
         <div className="cardRow">
         <Card 
