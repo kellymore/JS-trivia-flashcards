@@ -36,7 +36,7 @@ class App extends Component {
     this.state = {
       cards: [
         {id: 1, question: '4 - "2" ', answer: "2", ecma: <a href="https://www.ecma-international.org/ecma-262/9.0/index.html#sec-subtraction-operator-minus">Why?</a> },
-        {id: 2, question: '4 + "2" ', answer: "42", ecma: <a href= "https://www.ecma-international.org/ecma-262/9.0/index.html#sec-addition-operator-plus">Why?</a>},
+        {id: 2, question: '4 + "2" ', answer: "42", ecma: 'The addition operator either performs string concatenation or numeric addition'},
         {id: 3, question: '1 == "1" ', answer: "True",  ecma: <a href= "https://www.ecma-international.org/ecma-262/9.0/index.html#sec-abstract-equality-comparison"> Why?</a>},
         {id: 4, question: '1 === "1" ', answer: "False", ecma: <a href= "https://www.ecma-international.org/ecma-262/9.0/index.html#sec-strict-equality-comparison">Why?</a>},
         {id: 5, question: "[] + [] ", answer: ' "" ', ecma: <a href = "https://www.ecma-international.org/ecma-262/9.0/index.html#sec-abstract-equality-comparison">Why?</a>},
