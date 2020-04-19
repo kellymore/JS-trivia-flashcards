@@ -14,7 +14,8 @@ const Card = (props) => {
 
              <div className ="back">
                  <div className = "answer"> {props.answer} </div>
-            </div>
+                 <div className= "ecma">{props.ecma}</div>
+            </div>       
 
         </div>
 
